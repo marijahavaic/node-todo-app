@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>TODO APP</title>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"
+        />
+        <style>
+            .logo,
+            footer {
+                text-align: center;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container-fluid">
+            <div class="logo">
+                <img
+                    src="https://agiliteach.b-cdn.net/medias/images/todo-app.png"
+                    alt="logo"
+                />
+            </div>
+
+            <div class="container">
+                <h1><%= task.title %></h1>
+                <p><%= task.description %></p>
+            </div>
+            <footer>
+                <p>
+                    Cours de NodeJS -
+                    <a href="https://www.agiliteach.org">Agiliteach</a>
+                </p>
+            </footer>
+        </div>
+    </body>
+</html>

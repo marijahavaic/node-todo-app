@@ -37,6 +37,13 @@ app.post("/tasks/create", (req, res) => {
     res.redirect("/tasks");
 });
 
+app.get("/tasks/:id", (req, res) => {
+    const tasks = JSON.parse(fs.readFileSync("db.json")).tasks;
+    let task = tasks.filter((taskId) => taskId === req.id);
+    // task = task[0];
+    res.render("task", { task });
+});
+
 app.get("/tasks/delete/:id", (req, res) => {
     const tasks = JSON.parse(fs.readFileSync("db.json")).tasks;
     const newTasks = tasks.filter(
